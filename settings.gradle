@@ -1,0 +1,4 @@
+include ':openconnect-wrapper'
+include ':openconnectVpnLib'
+include ':app'
+rootProject.name = "OpenConnect VPN Lib"
