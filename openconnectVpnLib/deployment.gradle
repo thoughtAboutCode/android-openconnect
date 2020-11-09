@@ -25,7 +25,7 @@ publishing {
             groupId getGroupId()
             artifactId getArtifactId()
             version getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
+            artifact("$buildDir/outputs/aar/openconnectVpnLib-release.aar")
         }
     }
 
