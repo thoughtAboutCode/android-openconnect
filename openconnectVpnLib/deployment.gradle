@@ -1,0 +1,42 @@
+apply plugin: 'maven-publish'
+
+def githubProperties = new Properties()
+githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
+
+def getGroupId = { ->
+    return 'bj.fasegiar.libraries'
+}
+
+def getGitHubUrl = { ->
+    return "https://maven.pkg.github.com/thoughtAboutCode/android-openconnect"
+}
+
+def getVersionName = { ->
+    return libraryVersionName
+}
+
+def getArtifactId = { ->
+    return "android-openconnect"
+}
+
+publishing {
+    publications {
+        production(MavenPublication) {
+            groupId getGroupId()
+            artifactId getArtifactId()
+            version getVersionName()
+            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri(getGitHubUrl())
+            credentials {
+                username = githubProperties['gpr.usr']
+                password = githubProperties['gpr.key']
+            }
+        }
+    }
+}

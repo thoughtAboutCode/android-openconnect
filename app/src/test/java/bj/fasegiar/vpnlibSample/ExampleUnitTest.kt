@@ -1,4 +1,4 @@
-package bj.fasegiar.openconnectvpnlib
+package bj.fasegiar.openconnectvpnlib_sample
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

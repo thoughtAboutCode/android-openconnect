@@ -1,4 +1,4 @@
-package bj.fasegiar.openconnectvpnlib
+package bj.fasegiar.vpnlibSample
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import bj.fasegiar.openconnectvpnlib.VPNConnectionStateMsg
+import bj.fasegiar.openconnectvpnlib.VPN_CREDENTIAL_REQUEST
+import bj.fasegiar.openconnectvpnlib.VpnConnectionHandler
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.dialog_view_for_failed_auth_layout.view.*
 import kotlinx.android.synthetic.main.dialog_view_layout.view.*
